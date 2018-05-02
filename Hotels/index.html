@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+<!--  <link rel="stylesheet" href="/resources/demos/style.css">-->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!--  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+     
+     <link href="css/datepicker.css" rel="stylesheet" type="text/css">
+        <script src="js/datepicker.js"></script>
+     
+     
+      <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<!------BURGER---->
+    <div class="wrapper">
+        <input type="checkbox" id="check-menu">
+        <label class="hiddenLabel" for="check-menu">MENU</label>
+        <div class="burger-line first"></div>
+        <div class="burger-line second"></div>
+        <div class="burger-line third"></div>
+        <div class="burger-line fourth"></div>
+        <nav class="main-menu">
+            <a href="#">SEARCH&nbsp;TICKETS</a>
+            <a href="#">SAPSAN</a>
+            <a href="#">ALLEGRO</a>
+            <a href="#">TRANS-SIBERIAN</a>
+            <a href="#">FAQ</a>
+        </nav>
+    </div>
+<!-------BURGER------->
+
+
+<header>
+
+
+ <div class="container">
+  <nav>
+   <ul class="menu">
+   <li><a href="#">SEARCH&nbsp;TICKETS</a></li>
+   <li><a href="#">SAPSAN</a></li>
+   <li><a href="#">ALLEGRO</a></li>
+   <li><a href="#">TRANS-&nbsp;SIBERIAN&nbsp;&#9660;</a>
+    <ul class="hidden-menu"> 
+     <li class="hidden-menu"><a href="#">Group travel</a></li> 
+     <li class="hidden-menu"><a href="#">Ticket types</a></li> 
+     <li class="hidden-menu"><a href="#">Child policy</a></li> 
+     <li class="hidden-menu"><a href="#">Change ticket request</a></li> 
+     <li class="hidden-menu"><a href="#">Cancel tickets</a></li> 
+    </ul> 
+   </li> 
+   <li><a href="#">FAQ&nbsp;&#9660;</a>
+    <ul class="hidden-menu"> 
+     <li class="hidden-menu"><a href="#">Group travel</a></li> 
+     <li class="hidden-menu"><a href="#">Ticket types</a></li> 
+     <li class="hidden-menu"><a href="#">Child policy</a></li> 
+     <li class="hidden-menu"><a href="#">Change ticket request</a></li> 
+     <li class="hidden-menu"><a href="#">Cancel tickets</a></li> 
+    </ul> 
+   </li> 
+   <li><a href="#">TICKETS&nbsp;GUIDE&nbsp;&#9660;</a>
+    <ul class="hidden-menu"> 
+     <li class="hidden-menu"><a href="#">Group travel</a></li> 
+     <li class="hidden-menu"><a href="#">Ticket types</a></li> 
+     <li class="hidden-menu"><a href="#">Child policy</a></li> 
+     <li class="hidden-menu"><a href="#">Change ticket request</a></li> 
+     <li class="hidden-menu"><a href="#">Cancel tickets</a></li> 
+    </ul> 
+   </li> 
+   <li><a href="#">CONTACT&nbsp;US&nbsp;&#9660;</a>
+    <ul class="hidden-menu"> 
+     <li class="hidden-menu"><a href="#">Group travel</a></li> 
+     <li class="hidden-menu"><a href="#">Ticket types</a></li> 
+     <li class="hidden-menu"><a href="#">Child policy</a></li> 
+     <li class="hidden-menu"><a href="#">Change ticket request</a></li> 
+     <li class="hidden-menu"><a href="#">Cancel tickets</a></li> 
+    </ul> 
+   </li> 
+  
+   
+<li><a class="signIn" href="#"> 
+     <span>Sign&nbsp;in</span>
+</a></li>
+  </ul>
+   </nav>
+    </div>
+</header>   
+
+<!-------------------MAIN CONTENT-------------------------->
+<main>
+   <div class="container">
+    <div class="direction">
+     <h1>Russian Train Tickets</h1>
+     <form class="direction_form">
+     <div class="block block_1">
+         <label class="direct_label label_departure" for="departure">Departure city:</label>
+
+        <input class="inputCity" type=text id="departure" placeholder="Type city name">
+        <p class="exampleCity">Ex: <span onclick="replaceDeSt()">St. Petersburg</span>, <span onclick="replaceDeMo()">Moscow</span></p>
+    </div>
+    <img class="change_dir" src="img/change_city.png" alt="direction_change" onclick="change()" width="30" height="16"> 
+    <div class="block block_2">
+        <label class="direct_label label_arrival" for="arrival">Arrival city:</label>
+
+        <input class="inputCity" type=text id="arrival" placeholder="Type city name">
+        <p class="exampleCity">Ex: <span onclick="replaceArMo()">Moscow</span>, <span onclick="replaceArSt()">St. Petersburg</span></p>
+    </div>
+    </form>
+
+  </div>
+    
+    <div class="bottom_form">
+    <form class="datepickers">
+     <input type='text' class="datepicker-here" data-position="right top" placeholder="dd.mm.yyyy">
+     
+     <div class="checkbox_box">
+           <img class="onCheck" src="img/on_checkbox.png" alt="#">
+            <p><input type="checkbox" name="agree" id="checkboxId" onclick="agreeForm(this.form)"> 
+                <label for="checkboxId">Roundtrip</label></p>
+         </div>
+     <input type='text' class="datepicker-here" id="datepicker" data-position="right top" placeholder="dd.mm.yyyy" disabled>
+    </form>
+    
+    <div class="cur_ser">
+     <form class="currency" action="#" method="post">
+  <div class="form__select">
+    <select name="select">
+      <option value="1">USD</option>
+      <option value="2">RUB</option>
+      <option value="3">GBR</option>
+      <option value="4">EUR</option>
+      <option value="5">CHF</option>
+    </select>
+  </div>
+</form>
+  <button class="search_bt"> <img src="img/search.png" alt=""> Search</button>
+  </div>
+   </div>
+    </div>
+    
+    
+</main>
+
+
+
+<script>
+    function change() {
+        let departure = document.getElementById('departure').value;
+        let arrival = document.getElementById('arrival').value;
+        document.getElementById('departure').value = arrival;
+        document.getElementById('arrival').value = departure;
+ }
+   
+   function agreeForm(f) {
+    if (f.agree.checked) f.datepicker.disabled = 0 
+    else f.datepicker.disabled = 1
+   }
+    
+    function replaceDeMo() {
+  document.getElementById('departure').value = 'Moscow';
+}
+
+function replaceDeSt() {
+  document.getElementById('departure').value = 'St. Petersburg';
+}
+
+function replaceArMo() {
+  document.getElementById('arrival').value = 'Moscow';
+}
+
+function replaceArSt() {
+  document.getElementById('arrival').value = 'St. Petersburg';
+}
+    
+  </script>
+ 
+</body>
+</html>
